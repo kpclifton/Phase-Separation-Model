@@ -62,3 +62,12 @@ lines 74 and 75: this comprises setting the right half of the grid to temperatur
 
 - `calculateClusters`:
 This function calculates the mean cluster size of the entire, left half and right half portions of the grid at each step.
+
+Reference
+[1] McGinnis, W., & Krumlauf, R. (1992). Homeobox genes and axial patterning. Cell, 68(2), 283-302. [2] Wadhams, G. H., & Armitage, J. P. (2004). Making sense of it all: bacterial chemotaxis. Nature Reviews Molecular Cell Biology, 5(12), 1024.
+[3] Van Haastert, P. J., & Devreotes, P. N. (2004). Chemotaxis: signalling the way forward. Nature reviews Molecular cell biology, 5(8), 626.
+[4] Prentice-Mott, H.V., Meroz, Y., Carlson, A., Levine, M.A., Davidson, M.W., Irimia, D., Charras, G.T., Mahadevan, L., and Shah, J.V. (2016). Directional memory arises from long-lived cytoskeletal asymmetries in polarized chemotactic cells. Proceedings of the National Academy of Sciences of the United States of America *113*, 1267-1272.
+[5] K. Tarbashevich, M. Reichman-Fried, C. Grimaldi, E. Raz, Chemokine-dependent pH elevation at the cell front sustains polarity in directionally digrating zebrafish germ cells. *Curr. Biol*. **25**, 1096–1103 (2015) [6] Shin, Y., and Brangwynne, C.P. (2017). Liquid phase condensation in cell physiology and disease. Science *357*.
+[7] Dine, E. A., Gil, A. A., Uribe, G., Brangwynne, C. P., & Toettcher, J. E. (2018). Protein phase separation provides long-term memory of transient spatial stimuli. bioRxiv, 9243, 283804. http://doi.org/10.1101/283804
+[8] Nicolas Cougot, Suvendra N. Bhattacharyya, Lucie Tapia-Arancibia, Remy Bordonné, Witold Filipowicz, Edouard Bertrand and Florence Rage. (2008). Dendrites of Mammalian Neurons Contain Specialized P-Body-Like Structures That Respond to Neuronal Activation. Journal of Neuroscience 17 December 2008, 28 (51) 13793-13804. ​https://doi.org/10.1523/JNEUROSCI.4155-08.2008
+[9] Shin, Y., Berry, J., Pannucci, N., Haataja, M.P., Toettcher, J.E., and Brangwynne, C.P. (2017). Spatiotemporal Control of Intracellular Phase Transitions Using Light-Activated optoDroplets. Cell *168*, 159-171 e114.
