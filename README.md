@@ -30,7 +30,7 @@ Note that the batch size and batch number settings are multiplicative. The simul
 Additionally, note that once Go is clicked, it is not possible to interrupt the simulation until it completes unless you quit the program.
 The simulation grid is represented with the same color scheme as in the paper, where white represents the presence of a protein and black the absence.
 
-![Example of GUI](Example.png "Example of GUI")
+![Example of GUI](ExampleGUI.png "Example of GUI")
 
 #### Simulation Overview
 The simulation is initialized and 700 squares of the 50x100 grid are filled with proteins (this is done with a uniform random distribution). The temperature of each square of the grid is set to 1. Each time a step is taken, the function `MoveProtein()` is called. The inputs passed into the function include the occupancy of all positions on the grid, the temperature of all positions at that time, and the size of the grid. `MoveProtein` picks a random protein (occupied square), calculates the reaction rate of movement of that protein to a randomly chosen neighboring unoccupied position, and moves the protein if a number chosen from the uniform random distribution on the interval (0,1] is greater than the reaction rate.
