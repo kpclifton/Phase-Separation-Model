@@ -48,7 +48,8 @@ $$ k = k_0 * \exp{\frac{\Delta E* n_{lost}}{\theta(x,y,t)}} $$
 - $k_0$ = constant = 1
 
 As described above, the reaction rate is dependent on  $n_{lost}$ , 
-the number of neighbors as well as a temperature stimulus, $\theta$ . For high values of $\theta$ , the reaction rate will decrease. Furthermore, the reaction rate is a function of 
+the number of neighbors as well as a temperature stimulus, $\theta$ . 
+For high values of $\theta$ , the reaction rate will decrease. Furthermore, the reaction rate is a function of 
 $\Delta E$, the binding energy for each bond, and 
 $k_0$, the "off-rate for the breaking a single interaction" [1]. 
 To allow the probability of diffusion with no bonds broken to equal one, we let $\Delta E$ and $k_0$ equal one.
