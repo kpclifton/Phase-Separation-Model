@@ -40,16 +40,20 @@ The boundaries are reflective so proteins are only allowed to move to positions 
 
 Subsequently, the reaction rate, $k$, is calculated. 
 
-$$ k = k_0 * exp{\frac{\Delta E* n_{lost}}{\Theta(x,y,t)}} $$
+$$ k = k_0 * exp{\frac{\Delta E* n_{lost}}{\theta(x,y,t)}} $$
 
 - $\Delta E$ = interaction energy = 1
 - $n_{lost}$ = number of bonds broken
 - $\theta (x,y,t)$ = temperature-like stimulus
 - $k_0$ = constant = 1
 
-As described above, the reaction rate is dependent on  $n_{lost}$ , the number of neighbors as well as a temperature stimulus, $\theta$ . 
+As described above, the reaction rate is dependent on  $n_{lost}$ , 
+the number of neighbors as well as a temperature stimulus, $\theta$ . 
 
-For high values of $\theta$ , the reaction rate will decrease. Furthermore, the reaction rate is a function of the $\Delta E$, binding energy for each bond, and $k_0$, the "off-rate for the breaking a single interaction" [1]. To allow the probability of diffusion with no bonds broken to equal one, we let $\Delta E$ and $k_0$ equal one.
+For high values of $\theta$ , the reaction rate will decrease. Furthermore, the reaction rate is a function of the $\Delta E$, binding energy for each bond, 
+and $k_0$, the "off-rate for the breaking a single interaction" [1]. 
+
+To allow the probability of diffusion with no bonds broken to equal one, we let $\Delta E$ and $k_0$ equal one.
 
 Lastly, a random number is chosen from the uniform random distribution on the interval (0,1] and is compared to the reaction rate, $k$. If $k$ is greater than the random number, then the current position of the protein becomes unoccupied and the unoccupied position which has been selected for the protein to move to becomes occupied. By this algorithm, some steps are completed without the protein moving to a new position. There are two scenarios when no movement occurs. The first is when the reaction rate is less than the random number. The second is when the randomly selected position to move to is occupied.
 
