@@ -30,7 +30,7 @@ Note that the batch size and batch number settings are multiplicative. The simul
 Additionally, note that once Go is clicked, it is not possible to interrupt the simulation until it completes unless you quit the program.
 The simulation grid is represented with the same color scheme as in the paper, where white represents the presence of a protein and black the absence.
 
-![Example of GUI](exampleGUI.png "Example of GUI")
+![Example of GUI](Example.png "Example of GUI")
 
 #### Simulation Overview
 The simulation is initialized and 700 squares of the 50x100 grid are filled with proteins (this is done with a uniform random distribution). The temperature of each square of the grid is set to 1. Each time a step is taken, the function `MoveProtein()` is called. The inputs passed into the function include the occupancy of all positions on the grid, the temperature of all positions at that time, and the size of the grid. `MoveProtein` picks a random protein (occupied square), calculates the reaction rate of movement of that protein to a randomly chosen neighboring unoccupied position, and moves the protein if a number chosen from the uniform random distribution on the interval (0,1] is greater than the reaction rate.
@@ -39,13 +39,14 @@ The boundaries are reflective so proteins are only allowed to move to positions 
 
 Subsequently, the reaction rate, $k$, is calculated. 
 
-$$ k = k_0 * exp{\frac{\Delta * n_{lost}}{\theta(x,y,t)}} $$
-$\delta E$ = interaction energy = 1
-$n_{lost}$ = number of bonds broken
-$\theta (x,y,t)$ = temperature-like stimulus
-$k_0$ = constant = 1
+$$ k = k_0 * exp{\frac{\Delta * n_{lost}}{\Theta(x,y,t)}} $$
 
-As described above, the reaction rate is dependent on  $n_{lost}$, the number of neighbors as well as a temperature stimulus, $\theta$. For high values of $\theta$, the reaction rate will decrease. Furthermore, the reaction rate is a function of the $\Delta E$, binding energy for each bond, and $k_0$, the "off-rate for the breaking a single interaction" [1]. To allow the probability of diffusion with no bonds broken to equal one, we let $\Delta E$ and $k_0$ equal one.
+- $\Delta E$ = interaction energy = 1
+- $n_{lost}$ = number of bonds broken
+- $\theta (x,y,t)$ = temperature-like stimulus
+- $k_0$ = constant = 1
+
+As described above, the reaction rate is dependent on  $n_{lost}$, the number of neighbors as well as a temperature stimulus, $\theta$ . For high values of $\theta$ , the reaction rate will decrease. Furthermore, the reaction rate is a function of the $\Delta E$, binding energy for each bond, and $k_0$, the "off-rate for the breaking a single interaction" [1]. To allow the probability of diffusion with no bonds broken to equal one, we let $\Delta E$ and $k_0$ equal one.
 
 Lastly, a random number is chosen from the uniform random distribution on the interval (0,1] and is compared to the reaction rate, $k$. If $k$ is greater than the random number, then the current position of the protein becomes unoccupied and the unoccupied position which has been selected for the protein to move to becomes occupied. By this algorithm, some steps are completed without the protein moving to a new position. There are two scenarios when no movement occurs. The first is when the reaction rate is less than the random number. The second is when the randomly selected position to move to is occupied.
 
