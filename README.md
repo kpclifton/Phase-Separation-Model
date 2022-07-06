@@ -83,7 +83,7 @@ For convenience, the code is organized in order of modeling relevance, with the 
 - `calculateClusters`:
 This function calculates the mean cluster size of the entire, left half and right half portions of the grid at each step.
 
-### Reference
+## Reference
 - [1] McGinnis, W., & Krumlauf, R. (1992). Homeobox genes and axial patterning. Cell, 68(2), 283-302. 
 - [2] Wadhams, G. H., & Armitage, J. P. (2004). Making sense of it all: bacterial chemotaxis. Nature Reviews Molecular Cell Biology, 5(12), 1024.
 - [3] Van Haastert, P. J., & Devreotes, P. N. (2004). Chemotaxis: signalling the way forward. Nature reviews Molecular cell biology, 5(8), 626.
