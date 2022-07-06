@@ -1,5 +1,5 @@
 # Replicating a Phase Separation Model of Long Term Spatial Memory
-Final Project submitted for Random Walks in Biology (Spring 2018) at William & Mary
+Final Project submitted for APSC_456 Random Walks in Biology (Spring 2018) at William & Mary
 
 by Kalen Clifton and Ethan Jones
 
