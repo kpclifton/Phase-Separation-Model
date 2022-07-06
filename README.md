@@ -33,7 +33,7 @@ Note that the batch size and batch number settings are multiplicative. The simul
 Additionally, note that once Go is clicked, it is not possible to interrupt the simulation until it completes unless you quit the program.
 The simulation grid is represented with the same color scheme as in the paper, where white represents the presence of a protein and black the absence.
 
-#### Simulation Overview
+### Simulation Overview
 The simulation is initialized and 700 squares of the 50x100 grid are filled with proteins (this is done with a uniform random distribution). The temperature of each square of the grid is set to 1. Each time a step is taken, the function `MoveProtein()` is called. The inputs passed into the function include the occupancy of all positions on the grid, the temperature of all positions at that time, and the size of the grid. `MoveProtein` picks a random protein (occupied square), calculates the reaction rate of movement of that protein to a randomly chosen neighboring unoccupied position, and moves the protein if a number chosen from the uniform random distribution on the interval (0,1] is greater than the reaction rate.
 
 The boundaries are reflective so proteins are only allowed to move to positions within the grid and the total number of occupied positions is constant. To choose the direction for potential movement of a protein, we begin with a list of all eight neighboring positions and eliminate the positions that are not possible based on the boundaries of the grid. From the remaining positions, one position is chosen at random. Next, the occupancy of the position is determined from the array that stores the occupancy of all positions. If the selected position is unoccupied, then we calculate $n_{lost}$, the number of occupied neighboring positions for the protein that will potentially be moved. Considering the movement of a protein as an energy problem, the value of $n_{lost}$ is also the number of bonds that would be broken if the protein were to diffuse to new position.
@@ -60,7 +60,7 @@ If recording has been enabled, after each step the average cluster size of the t
 
 When the destabilization button is pressed, the right half of the grid has temperature increased from 1 to 2. If the destabilization button is pressed again, the temperature returns to 1 on the right half of the grid.
 
-#### Overview of tunable parameters:
+### Overview of tunable parameters:
 For convenience, the code is organized in order of modeling relevance, with the gui and time keeping functions being placed last. This overview will proceed in order of the functions of the main `Drawing.py` file.
 
 `__init__`:
