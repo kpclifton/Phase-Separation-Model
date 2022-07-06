@@ -40,7 +40,7 @@ The boundaries are reflective so proteins are only allowed to move to positions 
 
 Subsequently, the reaction rate, $k$, is calculated. 
 
-$$ k = k_0 * exp{\frac{\Delta E* n_{lost}}{\theta(x,y,t)}} $$
+$$ k = k_0 * \exp{\frac{\Delta E* n_{lost}}{\theta(x,y,t)}} $$
 
 - $\Delta E$ = interaction energy = 1
 - $n_{lost}$ = number of bonds broken
@@ -50,8 +50,8 @@ $$ k = k_0 * exp{\frac{\Delta E* n_{lost}}{\theta(x,y,t)}} $$
 As described above, the reaction rate is dependent on  $n_{lost}$ , 
 the number of neighbors as well as a temperature stimulus, $\theta$ . 
 
-For high values of $\theta$ , the reaction rate will decrease. Furthermore, the reaction rate is a function of the 
-$\Delta E$, binding energy for each bond, and 
+For high values of $\theta$ , the reaction rate will decrease. Furthermore, the reaction rate is a function of 
+$\Delta E$, the binding energy for each bond, and 
 $k_0$, the "off-rate for the breaking a single interaction" [1]. 
 
 To allow the probability of diffusion with no bonds broken to equal one, we let $\Delta E$ and $k_0$ equal one.
